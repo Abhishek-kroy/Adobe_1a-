@@ -1,0 +1,4 @@
+pdfplumber 
+numpy 
+sentence-transformers 
+argparse
