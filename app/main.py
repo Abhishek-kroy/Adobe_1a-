@@ -9,7 +9,7 @@ import torch
 from collections import defaultdict
 
 # Initialize the sentence transformer model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("localmodel")
 
 def clean_spacing(text):
     """Normalize whitespace in text"""
@@ -254,8 +254,8 @@ def build_outline_json(pdf_path, output_path="semantic_outline.json", margin=0.1
 #  CLI
 # ────────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    input_dir = "app/input"
-    output_dir = "app/output"
+    input_dir = "/app/input"
+    output_dir = "/app/output"
 
     # Find the first PDF file in input directory
     pdf_files = [f for f in os.listdir(input_dir) if f.lower().endswith(".pdf")]
